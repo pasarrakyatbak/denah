@@ -194,9 +194,15 @@ function attachLapakEvents() {
             }
 
             if (info && info.nama) {
-                caption.textContent = `Lapak #${num}: ${info.nama}`;
+                caption.innerHTML = `
+            <strong>Lapak #${num}: ${info.nama}</strong><br>
+            <small>Ukuran: 18 cm</small>
+        `;
             } else {
-                caption.textContent = `Lapak #${num} (Kosong)`;
+                caption.innerHTML = `
+            <strong>Lapak #${num} (Kosong)</strong><br>
+            <small>Ukuran: 18 cm</small>
+        `;
             }
         });
 
