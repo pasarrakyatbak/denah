@@ -614,6 +614,20 @@ body.dark-mode .rules h2 {
     color: #90caf9;
     /* biru muda agar tetap kontras */
 }
+.lapak-kosong {
+    background: #4CAF50 !important; /* hijau */
+    color: #fff;
+}
+
+.lapak-belum-bayar {
+    background: #F44336 !important; /* merah */
+    color: #fff;
+}
+
+.lapak-terisi {
+    background: #2196F3 !important; /* biru */
+    color: #fff;
+}
 
 /* Responsif HP kecil */
 @media (max-width: 480px) {
