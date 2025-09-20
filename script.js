@@ -182,17 +182,21 @@ function attachLapakEvents() {
             showTooltip(e, info ? { ...info, num } : { num });
         });
         el.addEventListener('click', () => {
-            if (lapakPhotos[num]) {
-                modal.style.display = 'flex';
-                modalImg.src = lapakPhotos[num];
+            modal.style.display = 'flex';
 
-                if (info && info.nama) {
-                    caption.textContent = `Lapak #${num}: ${info.nama}`; // tanpa tambahan status/lunas
-                } else {
-                    caption.textContent = `Lapak #${num} (Kosong)`;
-                }
+            if (lapakPhotos[num]) {
+                // Ada di array foto
+                modalImg.style.display = 'block';
+                modalImg.src = lapakPhotos[num];
             } else {
-                alert('Foto belum tersedia untuk Lapak #' + num);
+                // Tidak ada di array foto
+                modalImg.style.display = 'none';
+            }
+
+            if (info && info.nama) {
+                caption.textContent = `Lapak #${num}: ${info.nama}`;
+            } else {
+                caption.textContent = `Lapak #${num} (Kosong)`;
             }
         });
 
