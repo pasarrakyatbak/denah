@@ -30,8 +30,13 @@ const modalImg = document.getElementById('modalImg');
 const caption = document.getElementById('caption');
 const modalClose = document.getElementById('modalClose');
 const loading = document.getElementById('loading');
-function showLoading() { loading.style.display = 'flex'; }
-function hideLoading() { loading.style.display = 'none'; }
+function showLoading() { 
+    loading.style.display = 'flex'; 
+    document.getElementById('loadingText').textContent = 'Sedang memuat data...';
+}
+function hideLoading() { 
+    loading.style.display = 'none'; 
+}
 const lapakDataMap = {};
 function showTooltip(e, info) {
     const tooltip = document.getElementById('tooltip');
