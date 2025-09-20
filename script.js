@@ -69,20 +69,15 @@ function showTooltip(e, info) {
 function hideTooltip() {
     const tooltip = document.getElementById('tooltip');
     tooltip.classList.remove("show");
-}
-
-function hideTooltip() {
-    const tooltip = document.getElementById('tooltip');
     tooltip.style.opacity = 0;
 }
-
 
 // ===== Mapping Foto Lapak =====
 const lapakPhotos = {
     2: 'images/lapak2.jpg', 3: 'images/lapak3.jpg', 11: 'images/lapak11.jpg', 29: 'images/lapak29.jpg',
     37: 'images/lapak37.jpg', 51: 'images/lapak51.jpg', 57: 'images/lapak57.jpg', 61: 'images/lapak61.jpg',
     70: 'images/lapak70.jpg', 83: 'images/lapak83.jpg', 84: 'images/lapak84.jpg', 86: 'images/lapak86.jpg',
-    99: 'images/lapak99.jpg', 101: 'images/lapak108.jpg', 124: 'images/lapak124.jpg', 137: 'images/lapak137.jpg',
+    99: 'images/lapak99.jpg', 101: 'images/lapak101.jpg', 124: 'images/lapak124.jpg', 137: 'images/lapak137.jpg',
     139: 'images/lapak139.jpg', 140: 'images/lapak140.jpg', 145: 'images/lapak145.jpg', 151: 'images/lapak151.jpg',
     153: 'images/lapak153.jpg', 157: 'images/lapak157.jpg', 163: 'images/lapak163.jpg', 168: 'images/lapak168.jpg',
     194: 'images/lapak194.jpg', 200: 'images/lapak200.jpg', 214: 'images/lapak214.jpg'
@@ -168,10 +163,10 @@ function attachLapakEvents() {
         const num = el.textContent;
         const info = lapakDataMap[num];
 
-        // Warna background otomatis
-        if (!info) el.style.backgroundColor = '#4CAF50';      // Kosong
-        else if (!info.bayar) el.style.backgroundColor = '#F44336'; // Belum bayar
-        else el.style.backgroundColor = '#2196F3';            // Terisi
+       if (!info) el.classList.add('lapak-kosong');      
+       else if (!info.bayar) el.classList.add('lapak-belum-bayar'); 
+       else el.classList.add('lapak-terisi');
+
 
         // Tooltip selalu muncul selama kursor masih di atas
         el.addEventListener('mouseenter', e => {
@@ -210,7 +205,11 @@ function attachLapakEvents() {
     });
 }
 
-
+// Untuk mobile: tap menampilkan tooltip
+el.addEventListener('touchstart', e => {
+    showTooltip(e, info ? { ...info, num } : { num });
+    setTimeout(() => hideTooltip(), 2500); // auto hilang setelah 2,5 detik
+});
 // ===== Tutup Modal =====
 modalClose.addEventListener('click', () => modal.style.display = 'none');
 window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
