@@ -1,0 +1,194 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    color: #222;
+    padding: 18px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Scroll horizontal container */
+.scroll-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Flex column */
+.h-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: max-content;
+}
+
+/* Row lapak */
+.row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-width: max-content;
+}
+
+/* Kotak lapak modern */
+.lapak {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: #e3f2fd;
+    border: 2px solid #2196f3;
+    color: #2196f3;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.lapak:hover {
+    background: #2196f3;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Jalan */
+.road {
+    height: 40px;
+    background: #444;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0 10px;
+    min-width: max-content;
+}
+
+/* Gerbang */
+.jalan-gerbang {
+    width: 130px;
+    height: 45px;
+    background: #ff9800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.jalan-gerbang:hover {
+    background: #fb8c00;
+    transform: scale(1.05);
+}
+
+/* GAPURA MODERN */
+.gapura {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 100;
+}
+
+.gapura .tiang {
+    width: 20px;
+    height: 100%;
+    background: #6d4c41;
+    border-radius: 6px;
+    margin: 0 8px;
+    box-shadow: inset 0 0 5px #3e2723;
+}
+
+.gapura .atap {
+    background: linear-gradient(to bottom, #ffeb3b, #ffc107);
+    border-radius: 50% 50% 0 0;
+    padding: 12px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gapura .dekor-atas {
+    width: 100%;
+    height: 10px;
+    background: #fbc02d;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.gapura .teks {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media(max-width:900px) {
+    .lapak {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .jalan-gerbang {
+        width: 100px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .gapura .tiang {
+        width: 18px;
+    }
+
+    .gapura .atap {
+        padding: 10px 40px;
+    }
+}
+
+@media(max-width:480px) {
+    .lapak {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .jalan-gerbang {
+        width: 80px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .gapura .tiang {
+        width: 15px;
+    }
+
+    .gapura .atap {
+        padding: 8px 30px;
+    }
+
+    .gapura .teks {
+        font-size: 14px;
+    }
+}

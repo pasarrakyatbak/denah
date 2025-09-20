@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Denah Lapak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="denah-wrapper">
+        <div id="denah" class="container">
+            <!-- Sawah -->
+            <div class="area sawah">Sawah</div>
+
+            <!-- Sungai kiri -->
+            <div class="area">Sungai</div>
+
+            <!-- Lapak kiri -->
+            <div id="lapak-kiri" class="lapak"></div>
+
+            <!-- Jalan -->
+            <div class="area jalan">Jalan</div>
+
+            <!-- Lapak kanan -->
+            <div id="lapak-kanan" class="lapak"></div>
+
+            <!-- Sungai kanan -->
+            <div class="area">Sungai</div>
+        </div>
+    </div>
+
+    <!-- Kontrol Zoom -->
+    <div class="zoom-controls">
+        <button id="zoom-in">+</button>
+        <button id="zoom-out">−</button>
+        <button id="zoom-reset">⟳</button>
+    </div>
+
+    <!-- Modal Detail -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-btn">&times;</span>
+            <h2 id="modal-title">Detail Lapak</h2>
+            <p id="modal-body"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

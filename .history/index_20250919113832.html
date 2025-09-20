@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peta Lapak Modern</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>Peta Lapak</h1>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <div>
+            <div class="legend-color" style="background:#e3f2fd; border:2px solid #2196f3;"></div> Lapak
+        </div>
+        <div>
+            <div class="legend-color" style="background:#ff9800;"></div> Gerbang / Jalan
+        </div>
+        <div>
+            <div class="legend-color" style="background:#2196f3;"></div> Sungai
+        </div>
+        <div>
+            <div class="legend-color" style="background:#f5f5f5; border:2px dashed #666;"></div> Tiang WiFi & Lampu
+        </div>
+        <div>
+            <div class="legend-color" style="font-size:18px;">⛩️</div> Gapura
+        </div>
+    </div>
+
+    <!-- Grid Container -->
+    <div class="scroll-container">
+        <div class="h-inner">
+            <div class="row top" id="right-side"></div>
+            <div class="road">JALAN</div>
+            <div class="row bottom" id="left-side"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

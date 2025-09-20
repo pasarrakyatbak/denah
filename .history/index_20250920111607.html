@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peta Lapak Modern</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>📍 Denah Lapak</h1>
+    <!-- Toggle Dark Mode -->
+    <div class="dark-toggle">
+        <label>
+            <input type="checkbox" id="toggleDark">
+            Dark Mode
+        </label>
+    </div>
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Grid Container -->
+    <div class="scroll-container">
+        <div class="h-inner">
+            <!-- Rumput kiri -->
+            <div class="rumput-wrapper">
+                <div class="rumput"></div>
+            </div>
+
+            <!-- Lapak kanan (sekarang di atas jalan utama) -->
+            <div class="row bottom" id="right-side"></div>
+            <!-- Jalan utama -->
+            <div class="road-wrapper">
+                <div class="road">JALAN UTAMA</div>
+            </div>
+
+            <!-- Lapak kiri (sekarang di bawah jalan utama) -->
+            <div class="row top" id="left-side"></div>
+
+            <!-- Rumput kanan -->
+            <div class="rumput-wrapper">
+                <div class="rumput"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Foto -->
+    <div id="photoModal" class="modal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImg" />
+        <div id="caption"></div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-icon lapak-box"></div>
+                <span>Lapak</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-icon jalan-box"></div>
+                <span>Jalan / Gerbang depan Sekolahan</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-icon">⛩️</div>
+                <span>Gapura</span>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

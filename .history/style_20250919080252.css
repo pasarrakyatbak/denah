@@ -1,0 +1,82 @@
+/* Kontainer scroll horizontal */
+.scroll-container {
+    max-width: 100%;
+    overflow-x: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+/* Layout: atas (kanan) - jalan - bawah (kiri) */
+.road-layout {
+    display: flex;
+    flex-direction: column;
+    /* urut ke bawah */
+    align-items: center;
+    gap: 15px;
+}
+
+/* Kolom sisi jadi horizontal */
+.side {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+/* Jalan horizontal */
+.road {
+    writing-mode: horizontal-tb;
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 10px;
+}
+
+/* Kotak lapak */
+.lapak {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background: #e9f2ff;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Gerbang */
+.jalan-gerbang {
+    width: 60px;
+    height: 60px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    writing-mode: horizontal-tb;
+}
+
+/* Responsif */
+@media (max-width: 1024px) {
+    .lapak {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .lapak {
+        width: 40px;
+        height: 40px;
+        font-size: 11px;
+    }
+}

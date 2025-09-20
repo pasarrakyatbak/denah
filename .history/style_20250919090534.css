@@ -1,0 +1,170 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    color: #222;
+    padding: 18px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow-x: auto;
+    overflow-y: auto;
+    /* aktifkan scroll vertical */
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Flex column */
+.h-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: max-content;
+}
+
+/* Row lapak */
+.row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-width: max-content;
+}
+
+/* Kotak lapak modern */
+.lapak {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: #e3f2fd;
+    border: 2px solid #2196f3;
+    color: #2196f3;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.lapak:hover {
+    background: #2196f3;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Jalan */
+.road {
+    height: 40px;
+    background: #444;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0 10px;
+    min-width: max-content;
+}
+
+/* Gerbang */
+.jalan-gerbang {
+    width: 130px;
+    height: 45px;
+    background: #ff9800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.jalan-gerbang:hover {
+    background: #fb8c00;
+    transform: scale(1.05);
+}
+
+/* Container gapura lintas jalan */
+.gapura-container {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+/* Simbol gapura */
+.gapura-icon {
+    font-size: 22px;
+}
+
+/* Panah */
+.gapura-arrow {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Sungai di bawah lapak */
+.sungai-bawah {
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    background: linear-gradient(to right, #2196f3, #64b5f6);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media(max-width:900px) {
+    .lapak {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .jalan-gerbang {
+        width: 100px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+@media(max-width:480px) {
+    .lapak {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .jalan-gerbang {
+        width: 80px;
+        height: 34px;
+        font-size: 12px;
+    }
+}

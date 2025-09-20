@@ -1,0 +1,209 @@
+/* reset & base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    padding: 18px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+/* kontainer scroll horizontal */
+.scroll-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* inner flex column */
+.h-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    min-width: max-content;
+    padding-bottom: 8px;
+}
+
+/* baris lapak */
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    min-width: max-content;
+    padding: 6px 0;
+}
+
+/* kotak lapak */
+.lapak {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: #e9f2ff;
+    border: 2px solid #1e90ff;
+    color: #1e90ff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* jalan horizontal */
+.road {
+    height: 40px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 0 10px;
+    min-width: max-content;
+}
+
+/* gerbang */
+.jalan-gerbang {
+    width: 120px;
+    height: 40px;
+    background: #ff8c1a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 700;
+    margin: 0 6px;
+}
+
+/* GAPURA 3D */
+.gapura {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 100;
+    height: 150px;
+}
+
+.gapura .tiang {
+    width: 30px;
+    height: 100%;
+    background: #8B4513;
+    border-radius: 4px;
+    box-shadow: inset 0 0 6px #5a2e0b;
+    flex-shrink: 0;
+}
+
+.gapura .tiang.kiri {
+    margin-right: 12px;
+}
+
+.gapura .tiang.kanan {
+    margin-left: 12px;
+}
+
+.gapura .atap {
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    border-radius: 50% 50% 0 0;
+    padding: 12px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.gapura .dekor-atas {
+    width: 100%;
+    height: 15px;
+    background: #FFB800;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.gapura .teks {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .lapak {
+        width: 50px;
+        height: 50px;
+    }
+
+    .jalan-gerbang {
+        width: 100px;
+        height: 36px;
+    }
+
+    .gapura {
+        height: 120px;
+    }
+
+    .gapura .tiang {
+        width: 25px;
+    }
+
+    .gapura .atap {
+        padding: 10px 40px;
+    }
+
+    .gapura .teks {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lapak {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .jalan-gerbang {
+        background: #ffcc00;
+        padding: 6px 12px;
+        border-radius: 6px;
+        margin: 0 4px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .gapura {
+        height: 100px;
+    }
+
+    .gapura .tiang {
+        width: 20px;
+    }
+
+    .gapura .atap {
+        padding: 8px 30px;
+    }
+
+    .gapura .teks {
+        font-size: 14px;
+    }
+}

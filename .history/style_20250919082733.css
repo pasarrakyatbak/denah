@@ -1,0 +1,149 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    padding: 18px;
+    text-align: center;
+}
+
+/* judul */
+h1 {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+/* kontainer scroll HORIZONTAL */
+.scroll-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    /* horizontal scroll */
+    overflow-y: hidden;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* inner yang lebarnya disesuaikan (min-width: max-content supaya tidak ter-compress) */
+.h-inner {
+    display: flex;
+    flex-direction: column;
+    /* top row, road, bottom row */
+    gap: 18px;
+    align-items: flex-start;
+    /* agar row tidak ter-stretch */
+    min-width: max-content;
+    /* sangat penting supaya horizontal scroll bekerja penuh */
+    padding-bottom: 8px;
+}
+
+/* baris lapak (atas & bawah) */
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    min-width: max-content;
+    /* pastikan tidak dipotong */
+    padding: 6px 0;
+}
+
+/* tampilan kotak lapak */
+.lapak {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: #e9f2ff;
+    border: 2px solid #1e90ff;
+    color: #1e90ff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+/* jalan horizontal (akan di-set lebarnya lewat JS supaya sejajar dengan row terpanjang) */
+.road {
+    height: 40px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 0 10px;
+    min-width: max-content;
+}
+
+/* gerbang (kotak orange) */
+.jalan-gerbang {
+    width: 120px;
+    height: 40px;
+    background: #ff8c1a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+/* responsive: ukuran kotak lapak kecil di layar sempit */
+@media (max-width: 900px) {
+    .lapak {
+        width: 50px;
+        height: 50px;
+    }
+
+    .jalan-gerbang {
+        width: 100px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lapak {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .jalan-gerbang {
+        background: #ffcc00;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 4px;
+    }
+
+    .gapura {
+        text-align: center;
+        font-weight: bold;
+        background: #ffcc00;
+        color: #333;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 6px;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        /* sesuaikan posisi vertikal */
+        left: 50%;
+        /* posisi horizontal awal */
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+
+}

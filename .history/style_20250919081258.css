@@ -1,0 +1,96 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Kontainer scroll vertikal */
+.scroll-container {
+    max-width: 100%;
+    overflow-x: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+
+/* Layout jalan */
+.road-layout {
+    display: flex;
+    flex-direction: row;
+    /* urut dari kiri ke kanan */
+    align-items: flex-end;
+    /* biar sisi kiri (nomor kecil) ada di bawah */
+    gap: 15px;
+}
+
+/* Kolom sisi */
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* Jalan tengah */
+.road {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    padding: 20px 8px;
+    border-radius: 10px;
+}
+
+/* Kotak lapak */
+.lapak {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background: #e9f2ff;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Responsif tablet */
+@media (max-width: 1024px) {
+    .lapak {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
+
+/* Responsif HP */
+@media (max-width: 600px) {
+    .road-layout {
+        gap: 8px;
+    }
+
+    .lapak {
+        width: 40px;
+        height: 40px;
+        font-size: 11px;
+    }
+}

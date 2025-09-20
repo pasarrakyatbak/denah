@@ -1,0 +1,269 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1e88e5;
+    font-weight: 700;
+}
+
+/* Scroll container */
+.scroll-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 420px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    margin: auto;
+}
+
+.h-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: max-content;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-width: max-content;
+    gap: 3px;
+}
+
+/* Lapak compact */
+.lapak {
+    width: 55px;
+    height: 75px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #e3f2fd, #ffffff);
+    border: 2px solid #1e88e5;
+    color: #1e88e5;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.lapak:hover {
+    background: #1e88e5;
+    color: #fff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(30, 136, 229, 0.3);
+}
+
+/* Jalan utama */
+.road {
+    height: 45px;
+    background: #37474f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 6px 0;
+    letter-spacing: 0.5px;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Jalan / Gerbang */
+.jalan-gerbang {
+    width: 100px;
+    height: 35px;
+    background: #ff9800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    box-shadow: 0 3px 8px rgba(255, 152, 0, 0.3);
+}
+
+.jalan-gerbang:hover {
+    background: #fb8c00;
+    transform: translateY(-2px);
+}
+
+/* Gapura lintas jalan */
+.gapura-container {
+    width: 50px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.gapura-icon {
+    font-size: 20px;
+}
+
+.gapura-arrow {
+    font-size: 14px;
+}
+
+/* Sungai */
+.sungai-bawah {
+    background: linear-gradient(180deg, #2196f3 0%, #64b5f6 100%);
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110%;
+    height: 28px;
+}
+
+.sungai-atas {
+    background: linear-gradient(90deg, #00bfff, #4fc3f7);
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin-bottom: 2px;
+}
+
+/* Tiang WiFi + Lampu */
+.tiang-container {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    min-width: 70px;
+    padding: 4px 6px;
+    background: #fafafa;
+    border: 1px dashed #666;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #444;
+}
+
+.tiang-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Rumput */
+.rumput-wrapper {
+    position: relative;
+}
+
+.rumput {
+    height: 18px;
+    width: 100%;
+    background: repeating-linear-gradient(45deg,
+            #66bb6a,
+            #66bb6a 6px,
+            #81c784 6px,
+            #81c784 12px);
+    border-radius: 4px;
+}
+
+/* Sungai samping */
+.sungai-side {
+    width: 100%;
+    height: 22px;
+    background: linear-gradient(90deg, #2196f3, #64b5f6);
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* Legend */
+.legend {
+    margin-top: 15px;
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legend-icon {
+    font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width:600px) {
+    .scroll-container {
+        height: 320px;
+        padding: 10px;
+    }
+
+    .lapak {
+        width: 45px;
+        height: 65px;
+        font-size: 11px;
+    }
+
+    .jalan-gerbang {
+        width: 80px;
+        height: 28px;
+        font-size: 10px;
+    }
+
+    .sungai-bawah {
+        height: 24px;
+        font-size: 10px;
+    }
+
+    .road {
+        height: 35px;
+        font-size: 11px;
+    }
+}
